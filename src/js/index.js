@@ -204,7 +204,7 @@ const searchForm = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const loadBtn = document.querySelector('.load-more');
 
-const lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery', {
   captionDelay: 250,
   captionsData: 'alt',
 });
@@ -294,7 +294,7 @@ async function fetchImages(searchValue, currentPage) {
         return `
         <div class="photo-card">
           <div class ="thumb">
-            <img class="img" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" />
+            <img class="img" src="${image.webformatURL}" alt="${image.tags}" loading="lazy" height= 200px; />
           </div>
           <div class="info">
             <p class="info-item">
